@@ -1,0 +1,81 @@
+@import "libs/bootstrap-reboot.min.css";
+@import url('https:// ===fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+@import "base/mixins";
+@import "base/variables";
+
+
+
+// === Common === 
+body{
+    @include roboto;
+   
+}
+.section-outer {
+    border-bottom: 1px solid $color-divider;
+}
+.section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
+
+    &--wide {
+        max-width: 1200px;
+    }
+}
+
+@import "blocks/header";
+@import "blocks/hero-image";
+@import "blocks/customers";
+@import "blocks/plan-and-menage";
+@import "blocks/features";
+@import "blocks/stats";
+@import "blocks/blog";
+@import "blocks/quotes";
+@import "blocks/get-started";
+@import "blocks/faq";
+@import "blocks/newsletter";
+@import "blocks/footer";
+
+
+
+
+// === / Comon === 
+
+// === HEADER ===  
+    
+// === //HEADER ===  
+
+// === HERO-IMAGE ===
+
+// === //HERO-IMAGE ===
+// === CUSTOMERS ===  
+
+// === //CUSTOMERS ===  
+// === PLAN-AND-MENAGE ===
+
+// === //PLAN-AND-MENAGE ===
+// === FEATURES ===  
+
+// === //FEATURES ===  
+// === STATS ===  
+
+// === //STATS ===  
+// === BLOG ===  
+
+// === //BLOG ===  
+// === QUOTES ===  
+
+// === //QUOTES ===  
+// === FAQ ===  
+
+// === //FAQ ===  
+// === GET-STARTED ===
+
+// === //GET-STARTED ===
+// === NEWSLETTER ===  
+
+// === //NEWSLETTER ===  
+// === FOOTER ===   
+
+// === //FOOTER ===   
