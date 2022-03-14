@@ -4,3 +4,8 @@
 @mixin Quicksand {
     font-family: 'Quicksand', sans-serif;
 }
+@mixin list-null {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}

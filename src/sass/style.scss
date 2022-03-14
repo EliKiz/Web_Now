@@ -112,10 +112,9 @@ h5 {
 }
 
 .dots {
+    @include list-null();
     display: flex;
-    padding: 0; 
-    margin: 0;
-    list-style-type: none;
+    justify-content: center;
 
     &__item {
         width: $base * 2;

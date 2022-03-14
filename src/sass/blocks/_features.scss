@@ -9,12 +9,10 @@
         margin: 0 auto;
     }
     .featurest-list {
+        @include list-null();
         display: flex;
         text-align: center;
-        
         margin: 0 0 $base*25;
-        padding: 0;
-        list-style: none;
         &__item {
             position: relative;
             flex-basis: 25%;

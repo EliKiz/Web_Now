@@ -18,10 +18,8 @@
     margin-left: $base * 18;
 }
 .nav-wrapper{
+    @include list-null();
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
     &__item {
         & + & {
             margin-left: $base * 10;
@@ -47,11 +45,9 @@
     margin-left: auto;
 }
     .socials-wrapper{
+        @include list-null();
         display: flex;
         align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
         &__item {
             & + & {
                 margin-left: $base * 10;

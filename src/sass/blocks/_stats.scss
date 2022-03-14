@@ -1,6 +1,36 @@
 .section-stats {
-    .section-inner {
-        padding-top: &padding-vertical-sm;
-        padding-bottom: &padding-vertical-sm;
+    background-color: #d8e3fe;
+    display: flex;
+    &__icon {
+        margin-bottom: $base*6;
+    }
+    &__number {
+        @include Quicksand();
+        font-size: $fs-xl;
+        margin-bottom: $base*7;
+        
+    }
+    &__text {
+        @include Quicksand();
+        font-size: $fs-lg;
+        font-weight: $fw-medium;
+        width: 80%;
+        line-height: 1.5;
+    }
+    
+    &__left,&__right {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        padding: $base*16 $base*22;
+    }
+    &__left {
+        background-color: #5e80ff;
+        text-align: right;
+        color: #fff;
+        align-items: flex-end;
+    }
+    &__right {
+        color: #5e80ff;
     }
 }
