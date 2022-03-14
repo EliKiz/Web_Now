@@ -1,4 +1,32 @@
-.section-plan-and-menages {
+.section-plan-and-menage {
+    background-color: #f5f8ff;
+    overflow: hidden;
+    position: relative;
+    
+
+    &__content {
+        width: 50%;
+        .aside-image {
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
+        h3 {
+            font-weight: $fw-regular;
+            span {
+                font-weight: $fw-medium;
+            }
+        }
+        .text {
+            line-height: 2;
+            margin-bottom: $base *12;
+        }
+        .btn-group {
+            svg {
+                margin-left: $base;
+            }
+        }
+    }
     .section-inner {
 
     }

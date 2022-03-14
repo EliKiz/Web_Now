@@ -1,5 +1,53 @@
-.section-hero-images {
-    .section-inner {
 
+ .section-hero-image{
+    position: relative;
+   .dots {
+    position: absolute;
+    bottom: $base * 7;
+    left: 50%;
+    transform: translateX(-50%);
+    }  
+}
+
+.slider-hero-image {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+    
+   /* background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%); */
+    &__item {
+        background: url("../img/background/image.png") center 100%/ cover no-repeat ;
+        height: $base * 140;
+        text-align: center;
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &-content {
+            h2 {
+                font-weight: $fw-light;
+                span {
+                    font-weight: $fw-medium;
+                }
+            }
+            &-text {
+                width: 55%;
+                margin: 0 auto $base*5;
+                line-height: 2;
+            }
+        }
+        
+    }
+    .icon-play{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: $base * 13;
+        height: $base * 13;
+        background-color: #fff;
+        border-radius: 100%;
+        box-shadow: 0 10px 50px rgba(#c9d1e7, 0.6);
+        
     }
 }

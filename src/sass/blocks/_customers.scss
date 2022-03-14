@@ -1,6 +1,17 @@
 .section-customers {
     .section-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding-top: $padding-vertical-sm;
         padding-bottom: $padding-vertical-sm;
+        
+        &-item {
+            opacity: .3;
+            transition: $transition;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }

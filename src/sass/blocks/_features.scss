@@ -1,5 +1,76 @@
 .section-features {
-    .section-inner {
-
+    background: url('../img/background/clouds.svg') no-repeat 50% 50%;
+    h4 {
+        font-weight: $fw-medium;
     }
+    .btns {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .featurest-list {
+        display: flex;
+        text-align: center;
+        
+        margin: 0 0 $base*25;
+        padding: 0;
+        list-style: none;
+        &__item {
+            position: relative;
+            flex-basis: 25%;
+
+            &:not(:first-child) {
+                margin-left: $base*10;
+            }
+            &:not(:first-child)::before {
+                position: absolute;
+                top: 120px;
+                left: -34px;
+                content: '';
+                width: 28px;
+                height: 1px;
+                background-color: #dae4fe;
+
+            }
+            &-icon {
+                display: flex;
+                margin: 0 auto $base*8;
+                justify-content: center;
+                align-items: center;
+                width: $base *17;
+                height: $base *17;
+                border-radius: 100%;
+                background-color: #f1f5ff;
+            }
+            &-title {
+                font-size: $fs-md;
+                font-weight: $fw-bold;
+                color: #4074f8;
+                margin-bottom: $base*7;
+            }
+            &-text {
+                line-height: 2;
+            }
+        }
+    }
+}
+.or-block {
+    display: inline-flex;
+    align-items: center;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    line-height: $base*12;
+    text-transform: uppercase;
+    margin: 0 $base*4;
+    &::before,
+    &::after {
+        content: '';
+        width: $base*4;
+        height: 1px;
+        background-color: #dae4fe;
+    }
+    &::before {
+        margin-right: $base*4;}
+    &::after {
+        margin-left: $base*4;}
 }

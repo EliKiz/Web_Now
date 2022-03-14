@@ -1,7 +1,15 @@
 .section-footer {
     border-bottom: none;
     .section-inner {
-    padding-top: &padding-vertical-sm;
-    padding-bottom: &padding-vertical-sm;
+    padding-top: $padding-vertical-sm;
+    padding-bottom: $padding-vertical-sm;
+    }
+    .copyright {
+        @include Quicksand();
+        font-size: $fs-sm;
+        font-weight: $fw-medium;
+        color: #aeb8d0;
+        margin-left: $base * 24;
+        margin-top: $base * 7;
     }
 }

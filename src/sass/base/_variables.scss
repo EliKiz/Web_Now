@@ -1,9 +1,18 @@
+$base: 4px;
+$fw-light: 300;
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
-$padding-vertical-xs: 20px;
-$padding-vertical-sm: 60px;
-$padding-vertical: 120px;
 
+$fs-sm:12px;
+$fs-md:15px;
 
+$padding-vertical-xs: $base * 5;
+$padding-vertical-sm: $base * 15;
+$padding-vertical: $base * 30;
+
+$transition: .2s;
 $color-divider: rgba(216, 227, 254, 1);
+
+$color-primary: #697ca6;
+$color-secondary: #6188ff;
