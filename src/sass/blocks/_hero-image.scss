@@ -16,7 +16,7 @@
     
    /* background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%); */
     &__item {
-        background: url("../img/background/image.png") center 100%/ cover no-repeat ;
+        background: url("../img/background/image.png") center center/ cover no-repeat ;
         height: $base * 140;
         text-align: center;
         
@@ -32,7 +32,7 @@
                 }
             }
             &-text {
-                width: 55%;
+                max-width: 55%;
                 margin: 0 auto $base*5;
                 line-height: 2;
             }
@@ -45,9 +45,9 @@
         justify-content: center;
         width: $base * 13;
         height: $base * 13;
-        background-color: #fff;
+        background-color: $color-white;
         border-radius: 100%;
-        box-shadow: 0 10px 50px rgba(#c9d1e7, 0.6);
+        box-shadow: 0 $base*2 $base*12 rgba(#c9d1e7, 0.6);
         
     }
 }

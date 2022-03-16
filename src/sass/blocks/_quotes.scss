@@ -1,5 +1,52 @@
 .section-quotes {
+    background: linear-gradient( #eaf0ff, #f6f9ff);
     .section-inner {
+        display: flex;
+        justify-content: space-between;
+
+        h3{
+            font-weight: $fw-medium;
+        }
+    }
+    &__left,
+    &__right{
+        flex-basis: 45%;
+    }
+    .left{
+        .text {
+            line-height: 2;
+        }
+    }
+}
+.slider-quotes {
+    @include list-null();
+    margin-bottom: $base*20;
+    
+    &__item {
+        position: relative;
+        padding: $base*10 $base*17 $base*15;
+        border: 1px solid #d8e3fe;
+        background-color: $color-white;
+        box-shadow: 0 $base $base*12 #f3f5fa;
+        &-text{
+            font-size: $fs-md;
+            line-height: 2;
+            color: #676f95;
+        }
+        &-photo{
+            $height:$base*15;
+            position: absolute;
+            top: 100%;
+            left:50%;
+            transform: translateX(-50%);
+            width: $base*15;
+            height: $height;
+            margin-top: /* calc(-$height/2) */-$base*7;
+            border-radius: 100%;
+            background-color: $color-white;
+            overflow: hidden;
+
+        }
 
     }
 }

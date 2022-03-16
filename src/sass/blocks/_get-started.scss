@@ -1,5 +1,35 @@
 .section-get-started {
-    .section-inner {
+    text-align: center;
+    position: relative;
+    background:linear-gradient(#6888ff, #5E80FF) ;
+    color: $color-white;
 
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: url("../img/get-started/clouds.svg") no-repeat 50% 50%;
+        z-index: 5;
+    }
+    .section-inner {
+       position: relative;
+       z-index: 10;
+    }
+    h2,h5 {
+        color: $color-white;
+    }
+    h2 {
+        font-weight: $fw-light;
+        span{
+            font-weight: $fw-medium;
+        }
+    }
+    .text {
+        max-width: 55%;
+        line-height: 2;
+        margin: 0 auto $base*10;
     }
 }

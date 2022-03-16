@@ -14,27 +14,30 @@
         text-align: center;
         margin: 0 0 $base*25;
         &__item {
+            $margin-left: $base * 10;
+            $divider-width: $base * 7;
             position: relative;
             flex-basis: 25%;
 
             &:not(:first-child) {
-                margin-left: $base*10;
+                margin-left: $margin-left;
             }
             &:not(:first-child)::before {
                 position: absolute;
-                top: 120px;
-                left: -34px;
+                top: $base*30;
+                
+                left:  -$divider-width - ($margin-left - $divider-width) / 2;
                 content: '';
-                width: 28px;
+                width: $divider-width;
                 height: 1px;
                 background-color: #dae4fe;
 
             }
             &-icon {
                 display: flex;
-                margin: 0 auto $base*8;
                 justify-content: center;
                 align-items: center;
+                margin: 0 auto $base*8;
                 width: $base *17;
                 height: $base *17;
                 border-radius: 100%;
@@ -48,6 +51,7 @@
             }
             &-text {
                 line-height: 2;
+                font-size: $fs-sm;
             }
         }
     }

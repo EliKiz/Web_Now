@@ -1,6 +1,35 @@
 .section-newsletter {
+    background-color: $color-white;
     .section-inner {
-
+        display: flex;
+        justify-content: space-between;
     }
+    &__left{
+        flex-basis: 35%;
+        &-title {
+            @include Quicksand();
+            font-size: $fs-lg;
+            color: #3d4f9f;
+            margin-bottom: $base*4;
+            font-weight: $fw-bold;
+        }
+        &-text {
+            line-height: 2;
+            font-size: $fs-md;
+        }
+    }
+    &__right{
+        flex-basis: 55%;
+    }
+    .form-newsletter {
+        display: flex;
+        &__input {
+            flex-grow: 1;
+        }
+        &__btn {
+            margin-left: $base*3;
+        }
+    }
+
 }
 

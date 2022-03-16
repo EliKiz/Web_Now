@@ -28,18 +28,38 @@ body{
         max-width: 1200px;
     }
 }
+.input {
+    padding: $base*3 $base*4;
+    font-size: $fs-sm;
+    border: 1px solid transparent;
+    background-color: #efeff7;
+    border-radius: $base/2;
+    color: #7a85ad;
+    &--size-lg {
+        padding: $base*5 $base*6;
+        border-radius: $base;
+    }
+
+}
 
 .btn {
     @include Quicksand;
+    display: inline-block;
     font-weight: $fw-bold;
     font-size: $fs-sm;
     margin:0;
     padding: $base*3 $base*4;
     border: 1px solid transparent;
-    border-radius: 2px;
+    border-radius: $base/2;
     background: none;
     text-decoration: none;
     transition: $transition;
+    white-space: nowrap;
+    cursor: pointer;
+    &--size-lg {
+        padding: $base*5 $base*15;
+        border-radius: $base;
+    }
         
 
     &--primary {
@@ -49,6 +69,8 @@ body{
             color: #3a79ff;
             background-color: darken(#d2e1ff, 5%)
         }
+
+        
     }
     &--danger {
         color: #d43f3f;
@@ -65,6 +87,22 @@ body{
             color: #ffff;
             background-color: darken(#4c85ff, 5%)
         }
+        &-inverted {
+            color: #565f82;
+            background-color: #fff;
+            &:hover {
+            color: #565f82;
+            background-color: darken(#fff, 5%)
+            }
+        }
+    }
+    &--grayscale{
+        color: #7382A3;
+        background-color: #E8ECF4;
+        &:hover {
+            color: #7382A3;
+            background-color: darken(#E8ECF4, 5%)
+        }
     }
     &--no-bg {
         color: #adb4d2;
@@ -74,6 +112,14 @@ body{
             color: darken(#adb4d2, 10%);
             border: 1px solid darken(#d1d1e4, 10%); 
         } 
+        &-inverted {
+            color: #c7d3ff;
+            border-color: #a0b4ff;
+            &:hover {
+            color: lighten(#c7d3ff, 10%);
+            border-color: lighten(#a0b4ff, 5%)
+            }
+        }
     }
 }
 
@@ -104,6 +150,7 @@ h4 {
     font-size: 24px;}
 h5 {
     @include roboto();
+    text-transform: uppercase;
     margin-bottom: $base * 4;
     font-size: 10px;}
 

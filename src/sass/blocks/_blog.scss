@@ -1,5 +1,8 @@
 .section-blog {
     background-color: #f5f8ff;
+    h4 {
+        font-weight: $fw-medium;
+    }
     }
     .slider-wrapper {
         margin-bottom: $base*25;
@@ -9,8 +12,8 @@
         @include list-null();
         
         border: 1px solid #d8e3fe;
-        background-color: #fff;
-        box-shadow: 0 15px 50px #eff4ff;
+        background-color: $color-white;
+        box-shadow: 0 $base*3 $base*12 #eff4ff;
         &__item {
             display: flex;
             padding: $base*16 $base*8;
@@ -21,22 +24,22 @@
             
             &-gallery {
                 display: grid;
-                grid-template-columns: repeat(3, 120px)  ;
-                grid-template-rows: repeat(2, 120px);
-                grid-gap:12px;
+                grid-template-columns: repeat(3, $base*30)  ;
+                grid-template-rows: repeat(2, $base*30);
+                grid-gap: $base*4;
                 
                 
                 .image-link {
                     position: relative;
                     display: block;
-                    border-radius: 5px;
+                    border-radius: $base;
                     overflow: hidden;
-                    box-shadow: 0 15px 100px #e5ebf8;
+                    box-shadow: 0 $base*4 $base*25 #e5ebf8;
                     
                     .loupe {
+                        position: absolute;
                         opacity: 0;
                         transition: $transition;
-                        position: absolute;
                         top:50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
@@ -44,7 +47,7 @@
                         width: $base*16 ;
                         height:$base*16 ;
                         border-radius: 100%;
-                        background: #fff url('../icons/blog/loupe.svg') no-repeat 50% 50%;
+                        background: $color-white url('../icons/blog/loupe.svg') no-repeat 50% 50%;
                     }
                     
                     &:hover {

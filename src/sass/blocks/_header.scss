@@ -54,7 +54,7 @@
             }
             &-link {
                 path {
-                    fill: #aeb8d0;
+                    fill: /* #aeb8d0 */$color-primary;
                     transition: $transition;
                 }
                 :hover {
