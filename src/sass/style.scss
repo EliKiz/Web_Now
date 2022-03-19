@@ -16,24 +16,56 @@ body{
 
 
 .section-outer {
+    padding: 0 $base*5;
     border-bottom: 1px solid $color-divider;
+
 }
 .section-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding-top: $padding-vertical;
-    padding-bottom: $padding-vertical;
+    // padding-top: $padding-vertical;
+    // padding-bottom: $padding-vertical;
 
     &--wide {
         max-width: 1200px;
     }
 }
+
+.vertical-indent {
+    @mixin vertical-indent ($size) {
+        padding-top: $size;
+        padding-bottom: $size;
+    }
+
+    &--s {@include vertical-indent ( $base * 5);}
+    &--m {@include vertical-indent ($base * 15);}
+    &--l {@include vertical-indent ( $base * 30);}
+    @media (max-width: $breakpoint-md-max) {
+    &--m {@include vertical-indent ($base * 10);}
+    &--l {@include vertical-indent ( $base * 20);}
+    }
+    @media (max-width: $breakpoint-xs-max) {
+    &--m {@include vertical-indent ($base * 5);}
+    &--l {@include vertical-indent ( $base * 10);}
+    }
+}
+
+// .vertical-indent .vertical-indent--s
+// .vertical-indent .vertical-indent--m
+// .vertical-indent .vertical-indent--l
+
+
+// $padding-vertical-xs: $base * 5;
+// $padding-vertical-sm: $base * 15;
+// $padding-vertical: $base * 30;
+
+
 .input {
     padding: $base*3 $base*4;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     border: 1px solid transparent;
     background-color: #efeff7;
-    border-radius: $base/2;
+    border-radius: 2px;
     color: #7a85ad;
     &--size-lg {
         padding: $base*5 $base*6;
@@ -46,11 +78,11 @@ body{
     @include Quicksand;
     display: inline-block;
     font-weight: $fw-bold;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     margin:0;
     padding: $base*3 $base*4;
     border: 1px solid transparent;
-    border-radius: $base/2;
+    border-radius: 2px;
     background: none;
     text-decoration: none;
     transition: $transition;
@@ -59,6 +91,12 @@ body{
     &--size-lg {
         padding: $base*5 $base*15;
         border-radius: $base;
+
+        @media (max-width: $breakpoint-md-max) { 
+            padding-left: $base*10;
+            padding-right: $base*10;
+            
+        }
     }
         
 
@@ -132,27 +170,28 @@ h6 {
     @include Quicksand;
     margin: 0;
     padding: 0;
-    font-size: 48px;
+    
     font-weight: $fw-regular;
-    color: #3d4f9f;
+    
 }
 
-h1, 
+
+
 h2 {
-    margin-bottom: $base * 7;
-    font-size: 48px;
-}
-h3 {
-    margin-bottom: $base * 7;
-    font-size: 36px;}
-h4 {
-    margin-bottom: $base * 20;
-    font-size: 24px;}
-h5 {
+    
     @include roboto();
     text-transform: uppercase;
     margin-bottom: $base * 4;
-    font-size: 10px;}
+    font-size: $fs-xxs;
+    color:#3d4f9f;
+} 
+
+.section-subtitle {
+    @include Quicksand;
+    color: #3d4f9f;
+    margin-bottom: $base * 7;
+    font-size: $fs-xxl;
+}
 
 .ta-c {
     text-align: center;
@@ -188,6 +227,16 @@ h5 {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
 }
 
 // === / Comon === 

@@ -1,6 +1,7 @@
 
  .section-hero-image{
     position: relative;
+    padding: 0;
    .dots {
     position: absolute;
     bottom: $base * 7;
@@ -14,9 +15,8 @@
    padding: 0;
    list-style-type: none;
     
-   /* background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%); */
     &__item {
-        background: url("../img/background/image.png") center center/ cover no-repeat ;
+        background: url("../img/background/image.png") center center/ auto no-repeat ;
         height: $base * 140;
         text-align: center;
         
@@ -25,7 +25,7 @@
             height: 100%;
         }
         &-content {
-            h2 {
+            .section-subtitle {
                 font-weight: $fw-light;
                 span {
                     font-weight: $fw-medium;

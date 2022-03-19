@@ -1,7 +1,8 @@
 .section-features {
     background: url('../img/background/clouds.svg') no-repeat 50% 50%;
-    h4 {
+    .section-subtitle {
         font-weight: $fw-medium;
+        font-size: $fs-l;
     }
     .btns {
         display: flex;
@@ -13,26 +14,43 @@
         display: flex;
         text-align: center;
         margin: 0 0 $base*25;
+        
+        /* @media (max-width: $breakpoint-xs-max) { 
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        } */
+
         &__item {
             $margin-left: $base * 10;
             $divider-width: $base * 7;
             position: relative;
             flex-basis: 25%;
 
-            &:not(:first-child) {
+            & + & {
                 margin-left: $margin-left;
-            }
-            &:not(:first-child)::before {
-                position: absolute;
-                top: $base*30;
                 
-                left:  -$divider-width - ($margin-left - $divider-width) / 2;
-                content: '';
-                width: $divider-width;
-                height: 1px;
-                background-color: #dae4fe;
-
+            
+                &:not(:first-child)::before {
+                    position: absolute;
+                    top: $base*30;
+                    
+                    left: -34px ;
+                    content: '';
+                    width: $divider-width;
+                    height: 1px;
+                    background-color: #dae4fe;
+                }
+                @media (max-width: $breakpoint-xs-max) { 
+                    margin-left: 0;
+                    &::before {
+                        display: none;
+                    }
+                    
+                }
             }
+
+            
             &-icon {
                 display: flex;
                 justify-content: center;
@@ -44,22 +62,43 @@
                 background-color: #f1f5ff;
             }
             &-title {
-                font-size: $fs-md;
+                @include roboto();
+                font-size: $fs-s;
                 font-weight: $fw-bold;
                 color: #4074f8;
                 margin-bottom: $base*7;
             }
             &-text {
                 line-height: 2;
-                font-size: $fs-sm;
+                font-size: $fs-xs;
+            }
+            @media (max-width: $breakpoint-xs-max) {
+                flex-basis: 45%;
+                margin-bottom: $base*10;
+                &-icon {margin-bottom: $base * 4;}
+                &-title {
+                    margin-bottom: $base * 3;
+                }
             }
         }
+      @media (max-width: $breakpoint-xs-max) {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: $base*5;
+        
+    }  
     }
+    @media (max-width: $breakpoint-md-max) {
+        margin-bottom: $base * 15;
+        }
+    
+    
 }
+
 .or-block {
     display: inline-flex;
     align-items: center;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     font-weight: $fw-medium;
     line-height: $base*12;
     text-transform: uppercase;

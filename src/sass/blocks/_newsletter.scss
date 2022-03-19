@@ -3,19 +3,26 @@
     .section-inner {
         display: flex;
         justify-content: space-between;
+        @media (max-width: $breakpoint-md-max) {
+           flex-direction: column;
+        }
     }
     &__left{
         flex-basis: 35%;
         &-title {
             @include Quicksand();
-            font-size: $fs-lg;
+            font-weight: $fw-bold;
+            font-size: $fs-m;
+            text-transform: none;
             color: #3d4f9f;
             margin-bottom: $base*4;
-            font-weight: $fw-bold;
         }
         &-text {
+            font-size: $fs-s;
             line-height: 2;
-            font-size: $fs-md;
+        }
+        @media (max-width: $breakpoint-md-max) {
+            margin-bottom: $base*5;
         }
     }
     &__right{

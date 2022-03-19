@@ -15,21 +15,27 @@
         z-index: 5;
     }
     .section-inner {
+        h2 {
+            color: #fff;
+        }
        position: relative;
        z-index: 10;
-    }
-    h2,h5 {
-        color: $color-white;
-    }
-    h2 {
-        font-weight: $fw-light;
-        span{
-            font-weight: $fw-medium;
+       .section-subtitle {
+           color: $color-white;
+           font-weight: $fw-light;
+           span{
+               font-weight: $fw-medium;
+           }
+        }
+
+        .text {
+            line-height: 2;
+            margin: 0 auto $base*10;
+            @media (min-width: $breakpoint-sm-min) {
+                max-width: 55%;
+
+            }
         }
     }
-    .text {
-        max-width: 55%;
-        line-height: 2;
-        margin: 0 auto $base*10;
-    }
+    
 }

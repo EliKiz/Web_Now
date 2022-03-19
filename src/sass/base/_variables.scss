@@ -1,17 +1,30 @@
+
+$breakpoint-sm-min: 576px;
+$breakpoint-xs-max: $breakpoint-sm-min - 1px;
+$breakpoint-md-min: 768px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px;
+$breakpoint-lg-min: 992px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px;
+$breakpoint-xxl-min: 1400px;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
+
 $base: 4px;
+
 $fw-light: 300;
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
-$fs-sm:12px;
-$fs-md:15px;
-$fs-lg:18px;
-$fs-xl:48px;
+$fs-xxs:10px;
+$fs-xs:12px;
+$fs-s:15px;
+$fs-m:18px;
+$fs-l:24px;
+$fs-xl:36px;
+$fs-xxl:48px;
 
-$padding-vertical-xs: $base * 5;
-$padding-vertical-sm: $base * 15;
-$padding-vertical: $base * 30;
 
 $transition: .2s;
 $color-divider: rgba(216, 227, 254, 1);

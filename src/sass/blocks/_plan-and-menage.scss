@@ -5,13 +5,13 @@
     
 
     &__content {
-        width: 50%;
+        width: 60%;
         .aside-image {
             position: absolute;
             top: 5%;
             left: 50%;
         }
-        h3 {
+        .section-subtitle {
             font-weight: $fw-regular;
             span {
                 font-weight: $fw-medium;
@@ -24,6 +24,15 @@
         .btn-group {
             svg {
                 margin-left: $base;
+            }
+        }
+        @media (min-width: $breakpoint-lg-min) {
+            width: 50%;
+        }
+        @media (max-width: $breakpoint-xs-max) {
+            width: 70%;
+            .aside-image{ 
+                left: 40%;
             }
         }
     }

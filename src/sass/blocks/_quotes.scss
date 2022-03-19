@@ -4,19 +4,28 @@
         display: flex;
         justify-content: space-between;
 
-        h3{
+        .section-subtitle {
+            font-size: $fs-xl;
             font-weight: $fw-medium;
         }
+        @media (max-width: $breakpoint-sm-max) {
+            flex-direction: column;
+        }
+
     }
     &__left,
     &__right{
         flex-basis: 45%;
     }
-    .left{
-        .text {
+    &__left{
+        &-text {
             line-height: 2;
         }
+        @media (max-width: $breakpoint-xs-max) {
+           margin-bottom: $base*10;
+        }
     }
+    
 }
 .slider-quotes {
     @include list-null();
@@ -29,7 +38,7 @@
         background-color: $color-white;
         box-shadow: 0 $base $base*12 #f3f5fa;
         &-text{
-            font-size: $fs-md;
+            font-size: $fs-s;
             line-height: 2;
             color: #676f95;
         }
@@ -38,10 +47,9 @@
             position: absolute;
             top: 100%;
             left:50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, calc($height/-2) );
             width: $base*15;
             height: $height;
-            margin-top: /* calc(-$height/2) */-$base*7;
             border-radius: 100%;
             background-color: $color-white;
             overflow: hidden;
