@@ -1,8 +1,32 @@
 .section-header {
-    position: relative;
-    .section-inner {
-       
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 10;    
+    background-color: #fff;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        background-color: rgba(0, 0, 0, .5);
     }
+
+    &--active-nav {
+        &::before {
+            
+            display: block;
+        }
+        #navigation { 
+            display: flex;
+        }
+    }
+
 }
 .main-navigation {
     display: flex;                                 
@@ -30,7 +54,7 @@
         @media (max-width: $breakpoint-md-max) {
             flex-direction: column;
             margin-left: 0;
-            margin-top: $base*5;
+            // margin-top: $base*5;
             .socials,
             .nav {
                 margin-bottom: $base*4;

@@ -11,12 +11,11 @@
 }
 
 .slider-hero-image {
-   margin: 0;
-   padding: 0;
-   list-style-type: none;
-    
+    @include list-null();
+    // display: flex;
     &__item {
-        background: url("../img/background/image.png") center center/ auto no-repeat ;
+        // min-width: 100vh;
+        background: url("../img/background/image.png") center center/ cover no-repeat ;
         height: $base * 140;
         text-align: center;
         

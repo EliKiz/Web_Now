@@ -17,8 +17,6 @@
                 }
                 
                 #{$parent}-trigger {
-                    // color: $color-primary;
-                    // font-weight: $fw-bold;
                     &-icon {
                         transform: rotate(0);
                     }
@@ -52,7 +50,7 @@
                 }
             }
             &-content {
-                display: flex;
+                display: none;
                 padding: 0 $base *4 $base *4 $base *12  ;
                 &-text {
                     font-size: $fs-s;

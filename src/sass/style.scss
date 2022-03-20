@@ -6,12 +6,21 @@
 
 
 
+
 // === Common === 
+/* html {
+    @media (max-width: $breakpoint-md-max) {
+        font-size: 14px;
+    }
+    @media (max-width: $breakpoint-sm-max) {
+        font-size: 10px;
+    }
+} */
 body{
     @include roboto;
+    padding-top: $base*20;
     
     color: #8d96bd;
-    
 }
 
 
@@ -31,6 +40,9 @@ body{
     }
 }
 
+
+
+
 .vertical-indent {
     @mixin vertical-indent ($size) {
         padding-top: $size;
@@ -49,16 +61,6 @@ body{
     &--l {@include vertical-indent ( $base * 10);}
     }
 }
-
-// .vertical-indent .vertical-indent--s
-// .vertical-indent .vertical-indent--m
-// .vertical-indent .vertical-indent--l
-
-
-// $padding-vertical-xs: $base * 5;
-// $padding-vertical-sm: $base * 15;
-// $padding-vertical: $base * 30;
-
 
 .input {
     padding: $base*3 $base*4;
@@ -93,8 +95,8 @@ body{
         border-radius: $base;
 
         @media (max-width: $breakpoint-md-max) { 
-            padding-left: $base*10;
-            padding-right: $base*10;
+            padding-left: $base*5;
+            padding-right: $base*5;
             
         }
     }
@@ -201,22 +203,35 @@ h2 {
     @include list-null();
     display: flex;
     justify-content: center;
+    
 
-    &__item {
-        width: $base * 2;
-        height: $base * 2;
-        background-color: #d1d6e3;
-        border-radius: 100%;
+}
+.swiper-pagination-bullet {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $base * 6;
+    height: $base * 4;
+    background-color: unset;
+    cursor: pointer;
+    &::before {
+        display: block;
+        content: '';
+        width: $base*2;
+        height: $base*2;
+        background-color: #7d818a;
         transition: $transition;
-        cursor: pointer;
-        &--active {
-            background-color: #5283ff;
-        }
-        & + & {
-            margin-left: $base * 3;
-        }
+        border-radius: 100%;
+    }
+    &-active::before { 
+        background-color: #5283ff;
+    }
+    & + & {
+        margin-left: $base;
     }
 }
+
 .btn-group {
     display: inline-flex;
     .btn:nth-child(1) {
@@ -255,6 +270,7 @@ h2 {
 @import "blocks/faq";
 @import "blocks/newsletter";
 @import "blocks/footer";
+
 
 
 

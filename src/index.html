@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Landing page in modern style ">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/css/style.min.css">
     <title>Project</title>
 </head>
@@ -24,7 +25,7 @@
                         <span class="btn-burger__line"></span >
                         <span class="btn-burger__line"></span>
                     </button>
-                    <div class="main-navigation__inner-wrapper">
+                    <div class="main-navigation__inner-wrapper" id="navigation" >
                         <nav class="nav">
                             <ul class="nav-wrapper">
                                 <li class="nav-wrapper__item">
@@ -90,9 +91,41 @@
 
     <!-- hero-image  -->
 
-    <section class="section-outer section-hero-image">
-        <ul class="slider-hero-image">
-            <li class="slider-hero-image__item" > 
+    <section class="section-outer section-hero-image swiper">
+        <ul class="slider-hero-image swiper-wrapper">
+            <li class="slider-hero-image__item swiper-slide" > 
+                <div class="section-inner slider-hero-image__item-content vertical-indent vertical-indent--l">
+                    <h2>PLAN YOUR LIFE</h2>
+                    <div class="section-subtitle">Increase your <span>productivity</span></div>
+                    <div class="slider-hero-image__item-content-text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</div>
+                    <div class="btn-icon-play-wrapper">
+                        <a href="#" aria-label="Play">
+                            <span class="icon-play">
+                                <svg width="12" height="12" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 2.73354C6.66667 3.11844 6.66667 4.08069 6 4.46559L1.5 7.06367C0.833333 7.44857 0 6.96744 0 6.19764V1.00149C0 0.231691 0.833333 -0.249434 1.5 0.135467L6 2.73354Z" fill="#5E81FF"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="slider-hero-image__item swiper-slide" > 
+                <div class="section-inner slider-hero-image__item-content vertical-indent vertical-indent--l">
+                    <h2>PLAN YOUR LIFE</h2>
+                    <div class="section-subtitle">Increase your <span>productivity</span></div>
+                    <div class="slider-hero-image__item-content-text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</div>
+                    <div class="btn-icon-play-wrapper">
+                        <a href="#" aria-label="Play">
+                            <span class="icon-play">
+                                <svg width="12" height="12" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 2.73354C6.66667 3.11844 6.66667 4.08069 6 4.46559L1.5 7.06367C0.833333 7.44857 0 6.96744 0 6.19764V1.00149C0 0.231691 0.833333 -0.249434 1.5 0.135467L6 2.73354Z" fill="#5E81FF"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="slider-hero-image__item swiper-slide" > 
                 <div class="section-inner slider-hero-image__item-content vertical-indent vertical-indent--l">
                     <h2>PLAN YOUR LIFE</h2>
                     <div class="section-subtitle">Increase your <span>productivity</span></div>
@@ -109,11 +142,11 @@
                 </div>
             </li>
         </ul>
-        <ul class="dots">
-            <li class="dots__item dots__item--active "></li>
+        <div class="dots swiper-pagination"></div>
+            <!-- <li class="dots__item dots__item--active "></li>
             <li class="dots__item"></li>
-            <li class="dots__item"></li>
-        </ul>
+            <li class="dots__item"></li> -->
+        
     </section>
 
     <!-- / hero-image  -->  
@@ -223,38 +256,75 @@
         <div class="section-inner vertical-indent vertical-indent--l">
             <h2 class="ta-c">OUR RESOURCES</h2>
                 <div class="ta-c section-subtitle">Start reading our blog </div>
-            <div class="slider-wrapper">
-                <ul class="slider-blog">
-                    <li class="slider-blog__item">
-                        <div class="slider-blog__item-gallery">
-                            <a href="#" class="image-link image-link--b" aria-label="Image 1 ">
-                                <img src="img/blog/blog-img1.png" alt="blog-img"></a>
-                            <a href="#" class="image-link image-link--s-1" aria-label="Image 2">
-                                <img src="img/blog/blog-img2.png" alt="blog-img"></a>
-                            <a href="#" class="image-link image-link--s-2" aria-label="Image 3">
-                                <img src="img/blog/blog-img3.png" alt="blog-img"></a>                            
-                        </div>
-                        <div class="slider-blog__item-content">
-                            <h3 class="slider-blog__item-content-title">How to start planning</h3>
-                            <div class="slider-blog__item-content-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</div>
-                            <div class="btn-group">
-                                <a href="#" class="btn btn--primary">Read now
-                                </a>
-                                <a href="#" class="btn btn--no-bg">Add to your bookmarks</a>
+            <div class="slider-blog">
+                <div class=" slider-blog-container swiper">
+                    <ul class="slider-blog-wrapper swiper-wrapper">
+                        <li class="slider-blog-wrapper__item swiper-slide">
+                            <div class="slider-blog-wrapper__item-gallery">
+                                <a href="#" class="image-link image-link--b" aria-label="Image 1 ">
+                                    <img src="img/blog/blog-img1.png" alt="blog-img"></a>
+                                <a href="#" class="image-link image-link--s-1" aria-label="Image 2">
+                                    <img src="img/blog/blog-img2.png" alt="blog-img"></a>
+                                <a href="#" class="image-link image-link--s-2" aria-label="Image 3">
+                                    <img src="img/blog/blog-img3.png" alt="blog-img"></a>                            
                             </div>
-                        </div>
-                    </li>
-                </ul>
-                <a href="#" class=" btn-blog btn-blog--prev" aria-label="Previous sldier" ></a>
-                <a href="#" class="btn-blog btn-blog--next" aria-label="Next sldier" ></a>
-            </div>  
+                            <div class="slider-blog-wrapper__item-content">
+                                <h3 class="slider-blog-wrapper__item-content-title">How to start planning</h3>
+                                <div class="slider-blog-wrapper__item-content-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</div>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn--primary">Read now
+                                    </a>
+                                    <a href="#" class="btn btn--no-bg">Add to your bookmarks</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-blog-wrapper__item swiper-slide">
+                            <div class="slider-blog-wrapper__item-gallery">
+                                <a href="#" class="image-link image-link--b" aria-label="Image 1 ">
+                                    <img src="img/blog/blog-img1.png" alt="blog-img"></a>
+                                <a href="#" class="image-link image-link--s-1" aria-label="Image 2">
+                                    <img src="img/blog/blog-img2.png" alt="blog-img"></a>
+                                <a href="#" class="image-link image-link--s-2" aria-label="Image 3">
+                                    <img src="img/blog/blog-img3.png" alt="blog-img"></a>                            
+                            </div>
+                            <div class="slider-blog-wrapper__item-content">
+                                <h3 class="slider-blog-wrapper__item-content-title">How to start planning</h3>
+                                <div class="slider-blog-wrapper__item-content-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</div>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn--primary">Read now
+                                    </a>
+                                    <a href="#" class="btn btn--no-bg">Add to your bookmarks</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-blog-wrapper__item swiper-slide">
+                            <div class="slider-blog-wrapper__item-gallery">
+                                <a href="#" class="image-link image-link--b" aria-label="Image 1 ">
+                                    <img src="img/blog/blog-img1.png" alt="blog-img"></a>
+                                <a href="#" class="image-link image-link--s-1" aria-label="Image 2">
+                                    <img src="img/blog/blog-img2.png" alt="blog-img"></a>
+                                <a href="#" class="image-link image-link--s-2" aria-label="Image 3">
+                                    <img src="img/blog/blog-img3.png" alt="blog-img"></a>                            
+                            </div>
+                            <div class="slider-blog-wrapper__item-content">
+                                <h3 class="slider-blog-wrapper__item-content-title">How to start planning</h3>
+                                <div class="slider-blog-wrapper__item-content-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...</div>
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn--primary">Read now
+                                    </a>
+                                    <a href="#" class="btn btn--no-bg">Add to your bookmarks</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>  
+                <a href="#" class=" btn-blog btn-blog--prev swiper-button-prev" aria-label="Previous sldier" ></a>
+                <a href="#" class="btn-blog btn-blog--next swiper-button-next" aria-label="Next sldier" ></a>
             
-                <ul class="dots">
-                    <li class="dots__item dots__item--active "></li>
-                    <li class="dots__item"></li>
-                    <li class="dots__item"></li>
-                </ul>
-              
+            </div>  
+            <ul class="dots swiper-pagination"> </ul>
+            
+            
         </div>
     </section>
 
@@ -455,7 +525,7 @@
         </footer>
 
     <!-- / footer   -->
-    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -83,13 +83,13 @@
         }
       @media (max-width: $breakpoint-xs-max) {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         margin-bottom: $base*5;
         
-    }  
+        }  
     }
     @media (max-width: $breakpoint-md-max) {
-        margin-bottom: $base * 15;
+        padding-bottom: $base * 10;
         }
     
     
