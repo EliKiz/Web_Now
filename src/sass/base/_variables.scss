@@ -13,7 +13,7 @@ $breakpoint-xl-max: $breakpoint-xxl-min - 1px;
 
 // === function === 
 @function strip-unit($num) {
-    @return  $num / ($num * 0 + 1 );
+    @return $num / ($num * 0 + 1 );
     
 }
 @function rem($num) {

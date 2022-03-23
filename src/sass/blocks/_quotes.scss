@@ -1,5 +1,6 @@
 .section-quotes {
     background: linear-gradient( #eaf0ff, #f6f9ff);
+    overflow: hidden;
     .section-inner {
         display: flex;
         justify-content: space-between;
@@ -8,53 +9,104 @@
             font-size: $fs-xl;
             font-weight: $fw-medium;
         }
-        @media (max-width: $breakpoint-sm-max) {
+        @media (max-width: $breakpoint-md-max) {
             flex-direction: column;
         }
 
     }
     &__left,
     &__right{
-        flex-basis: 45%;
+        width: 45%;
+        @media (max-width: $breakpoint-md-max) {
+           width: 100%;
+        }
+       
     }
+
+        
+    
+
     &__left{
         &-text {
             line-height: 2;
         }
-        @media (max-width: $breakpoint-xs-max) {
-           margin-bottom: $base*10;
-        }
+       
     }
+    
+}
+
+.slider-quotes-container{
+    width: calc(50vw + 48px);
+    margin: -48px 0 $base*10 -48px ;
+    overflow: hidden;
+    
+
+    @media (max-width: $breakpoint-md-max) {
+        width: 110vw;
+        margin-top: 0;
+    
+     }
+     @media (max-width: $breakpoint-sm-max) {
+        margin: 0 0 $base*10 -28px ;
+     }
+     
     
 }
 .slider-quotes {
     @include list-null();
-    margin-bottom: $base*20;
+    display: flex;
     
     &__item {
-        position: relative;
-        padding: $base*10 $base*17 $base*15;
-        border: 1px solid #d8e3fe;
-        background-color: $color-white;
-        box-shadow: 0 $base $base*12 #f3f5fa;
-        &-text{
-            font-size: $fs-s;
-            line-height: 2;
-            color: #676f95;
+        box-sizing: border-box;
+        width: 30vw;
+        padding: $base*8 ;
+        opacity: .5;
+        transition: opacity $transition;
+        @media (max-width: $breakpoint-lg-max) {
+            width: 39vw;
+                padding-right: $base*8;
         }
-        &-photo{
-            $height:$base*15;
-            position: absolute;
-            top: 100%;
-            left:50%;
-            transform: translate(-50%, calc($height/-2) );
-            width: $base*15;
-            height: $height;
-            border-radius: 100%;
-            background-color: $color-white;
-            overflow: hidden;
 
+        &.swiper-slide-active {
+            opacity: 1;
         }
+        @media (max-width: $breakpoint-md-max) {
+           width: 80vw;
+           padding-right: $base*3;
+           padding-left: $base*12;
+            
+        }
+        @media (max-width: $breakpoint-sm-max) {
+            width: 100vw;
+            padding-right: $base*3;
+            padding-left: $base*6;
+         }
+        
+
+    }
+}
+.slider-quotes-item-content {
+    position: relative;
+    padding: $base*10 $base*17 $base*15;
+    border: 1px solid #d8e3fe;
+    background-color: $color-white;
+    box-shadow: 0 $base $base*12 #f3f5fa;
+    &__text{
+        font-size: $fs-s;
+        line-height: 2;
+        color: #676f95;
+    }
+    &__photo{
+        $height:$base*15;
+        position: absolute;
+        top: 100%;
+        left:50%;
+        transform: translate(-50%, calc($height/-2) );
+        width: $base*15;
+        height: $height;
+        border-radius: 100%;
+        background-color: $color-white;
+        overflow: hidden;
 
     }
 }

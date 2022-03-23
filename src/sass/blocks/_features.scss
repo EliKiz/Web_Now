@@ -27,28 +27,29 @@
             position: relative;
             flex-basis: 25%;
 
-            & + & {
+            &:not(:first-child) {
                 margin-left: $margin-left;
-                
-            
-                &:not(:first-child)::before {
-                    position: absolute;
-                    top: $base*30;
-                    
-                    left: -34px ;
-                    content: '';
-                    width: $divider-width;
-                    height: 1px;
-                    background-color: #dae4fe;
-                }
-                @media (max-width: $breakpoint-xs-max) { 
-                    margin-left: 0;
-                    &::before {
-                        display: none;
-                    }
-                    
-                }
+                @media (max-width: $breakpoint-xs-max) {&:not(:first-child) {margin-left: 0;}}
             }
+            &:not(:first-child)::before {
+                position: absolute;
+                top: $base*30;
+                
+                left: -34px ;
+                content: '';
+                width: $divider-width;
+                height: 1px;
+                background-color: #dae4fe;
+            }
+            @media (max-width: $breakpoint-xs-max) { 
+                margin-left: 0;
+                &::before {
+                    display: none;
+                    margin-left: unset;
+                }
+                
+            }
+            
 
             
             &-icon {

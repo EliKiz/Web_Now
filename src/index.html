@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Landing page in modern style ">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/css/style.min.css">
     <title>Project</title>
@@ -261,12 +262,12 @@
                     <ul class="slider-blog-wrapper swiper-wrapper">
                         <li class="slider-blog-wrapper__item swiper-slide">
                             <div class="slider-blog-wrapper__item-gallery">
-                                <a href="#" class="image-link image-link--b" aria-label="Image 1 ">
-                                    <img src="img/blog/blog-img1.png" alt="blog-img"></a>
-                                <a href="#" class="image-link image-link--s-1" aria-label="Image 2">
-                                    <img src="img/blog/blog-img2.png" alt="blog-img"></a>
-                                <a href="#" class="image-link image-link--s-2" aria-label="Image 3">
-                                    <img src="img/blog/blog-img3.png" alt="blog-img"></a>                            
+                                <a href="img/blog/blog-img1.png" data-fslightbox="slide-1"  class="image-link image-link--b" aria-label="Image 1 ">
+                                    <img src="img/blog/blog-img1.png" width="268" height="267"  alt="blog-img"></a>
+                                <a href="img/blog/blog-img2.png" data-fslightbox="slide-1"  class="image-link image-link--s-1" aria-label="Image 2">
+                                    <img src="img/blog/blog-img2.png" width="127" height="127" alt="blog-img"></a>
+                                <a href="img/blog/blog-img3.png" data-fslightbox="slide-1"  class="image-link image-link--s-2" aria-label="Image 3">
+                                    <img src="img/blog/blog-img3.png" width="127" height="127" alt="blog-img"></a>                            
                             </div>
                             <div class="slider-blog-wrapper__item-content">
                                 <h3 class="slider-blog-wrapper__item-content-title">How to start planning</h3>
@@ -280,12 +281,12 @@
                         </li>
                         <li class="slider-blog-wrapper__item swiper-slide">
                             <div class="slider-blog-wrapper__item-gallery">
-                                <a href="#" class="image-link image-link--b" aria-label="Image 1 ">
-                                    <img src="img/blog/blog-img1.png" alt="blog-img"></a>
-                                <a href="#" class="image-link image-link--s-1" aria-label="Image 2">
-                                    <img src="img/blog/blog-img2.png" alt="blog-img"></a>
-                                <a href="#" class="image-link image-link--s-2" aria-label="Image 3">
-                                    <img src="img/blog/blog-img3.png" alt="blog-img"></a>                            
+                                <a href="img/blog/blog-img1.png" class="image-link image-link--b" data-fslightbox="slide-2" aria-label="Image 1 ">
+                                    <img src="img/blog/blog-img1.png" width="268" height="267" alt="blog-img"></a>
+                                <a href="img/blog/blog-img2.png" class="image-link image-link--s-1" data-fslightbox="slide-2" aria-label="Image 2">
+                                    <img src="img/blog/blog-img2.png" width="127" height="127" alt="blog-img"></a>
+                                <a href="img/blog/blog-img3.png" class="image-link image-link--s-2" data-fslightbox="slide-2" aria-label="Image 3">
+                                    <img src="img/blog/blog-img3.png" width="127" height="127" alt="blog-img"></a>                            
                             </div>
                             <div class="slider-blog-wrapper__item-content">
                                 <h3 class="slider-blog-wrapper__item-content-title">How to start planning</h3>
@@ -299,12 +300,12 @@
                         </li>
                         <li class="slider-blog-wrapper__item swiper-slide">
                             <div class="slider-blog-wrapper__item-gallery">
-                                <a href="#" class="image-link image-link--b" aria-label="Image 1 ">
-                                    <img src="img/blog/blog-img1.png" alt="blog-img"></a>
-                                <a href="#" class="image-link image-link--s-1" aria-label="Image 2">
-                                    <img src="img/blog/blog-img2.png" alt="blog-img"></a>
-                                <a href="#" class="image-link image-link--s-2" aria-label="Image 3">
-                                    <img src="img/blog/blog-img3.png" alt="blog-img"></a>                            
+                                <a href="img/blog/blog-img1.png" class="image-link image-link--b" data-fslightbox="slide-2" aria-label="Image 1 ">
+                                    <img src="img/blog/blog-img1.png" width="268" height="267" alt="blog-img"></a>
+                                <a href="img/blog/blog-img2.png" class="image-link image-link--s-1" data-fslightbox="slide-2" aria-label="Image 2">
+                                    <img src="img/blog/blog-img2.png" width="127" height="127" alt="blog-img"></a>
+                                <a href="img/blog/blog-img3.png" class="image-link image-link--s-2" data-fslightbox="slide-2" aria-label="Image 3">
+                                    <img src="img/blog/blog-img3.png" width="127" height="127" alt="blog-img"></a>                                 
                             </div>
                             <div class="slider-blog-wrapper__item-content">
                                 <h3 class="slider-blog-wrapper__item-content-title">How to start planning</h3>
@@ -342,18 +343,36 @@
                 </div>
             </div>
             <div class="section-quotes__right">
-                <ul class="slider-quotes">
-                    <li class="slider-quotes__item">
-                        <div class="slider-quotes__item-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</div>
-                        <div class="slider-quotes__item-photo"><img src="img/quotes/reviev.jpg" alt="humen"></div>
+                <div class="slider-quotes-container swiper">
+                    <ul class="slider-quotes swiper-wrapper">
+                        <li class="slider-quotes__item swiper-slide">
+                            <div class="slider-quotes-item-content">
+                                <div class="slider-quotes-item-content__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</div>
+                                <div class="slider-quotes-item-content__photo"><img src="img/quotes/reviev.jpg" alt="humen"></div>
+                            </div>
+                        </li>
+                        <li class="slider-quotes__item swiper-slide">
+                            <div class="slider-quotes-item-content">
+                                <div class="slider-quotes-item-content__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</div>
+                                <div class="slider-quotes-item-content__photo"><img src="img/quotes/reviev.jpg" alt="humen"></div>
+                            </div>
+                        </li>
+                        <li class="slider-quotes__item swiper-slide">
+                            <div class="slider-quotes-item-content">
+                                <div class="slider-quotes-item-content__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</div>
+                                <div class="slider-quotes-item-content__photo"><img src="img/quotes/reviev.jpg" alt="humen"></div>
+                            </div>
+                        </li>
+                        <li class="slider-quotes__item swiper-slide">
+                            <div class="slider-quotes-item-content">
+                                <div class="slider-quotes-item-content__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</div>
+                                <div class="slider-quotes-item-content__photo"><img src="img/quotes/reviev.jpg" alt="humen"></div>
+                            </div>
+                        </li>
                         
-                    </li>
-                </ul>
-                <ul class="dots">
-                    <li class="dots__item dots__item--active "></li>
-                    <li class="dots__item"></li>
-                    <li class="dots__item"></li>
-                </ul>
+                    </ul>
+                </div>
+                <ul class="dots"></ul>
             </div>
 
             
@@ -525,6 +544,7 @@
         </footer>
 
     <!-- / footer   -->
+    <script src="js/fslightbox.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

@@ -5,6 +5,8 @@
         font-weight: $fw-medium;
         font-size: $fs-l;
     }
+    .swiper-button-prev {left: unset;}
+    .swiper-pagination-bullets.swiper-pagination-horizontal {bottom: unset;};
 }
     .slider-blog {
         margin-bottom: $base*25;
@@ -169,6 +171,7 @@
             }
 
         }
+        
     }
     .btn-blog{
         position: absolute;
@@ -197,6 +200,5 @@
             
         }
     }
-    .swiper-button-prev {left: unset;}
-    .swiper-pagination-bullets.swiper-pagination-horizontal {bottom: unset;};
+    
     

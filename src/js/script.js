@@ -107,6 +107,14 @@ new Swiper('.slider-blog-container', {
     // },
   });
 
-
-
+  
+  new Swiper('.slider-quotes-container', {
+    loop: true,
+    slidesPerView: "auto",
+   
+    pagination: {
+      el: '.section-quotes .dots',
+      clickable: true,
+    },
+  });
   
